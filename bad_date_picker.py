@@ -2,7 +2,7 @@ import streamlit as st
 import random
 from datetime import datetime, timedelta
 
-st.title("🎲 Losowanie terminu, który nikomu nie pasuje")
+st.title("Losowanie terminu na kolejne Gothic Piwo")
 
 # Losowe lata do wyboru
 rok = random.choice([2025, 2026])
@@ -36,6 +36,6 @@ if st.button("Losuj termin, który nikomu nie pasuje"):
     finalna_data = wybrana_data.replace(hour=godzina, minute=minuta)
 
     st.success(f"Wylosowano termin: **{finalna_data.strftime('%A, %d %B %Y, %H:%M')}**")
-    st.write("💀 Idealnie, żeby nikomu nie pasowało.")
+    st.write("Idealnie, nie pasuje nikomu.")
 else:
     st.info("Kliknij przycisk powyżej, aby wylosować termin.")
